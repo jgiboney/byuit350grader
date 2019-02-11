@@ -1,0 +1,540 @@
+{
+    "testSets":[
+        {
+            "name": "setup",
+            "tests":[
+                {
+                    "name":"Delete puppies",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy&conditions=id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete customers",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=customer&conditions=id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete breeds",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=breed&conditions=id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete veterinarians",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=veterinarian&conditions=id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete immunizations",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=immunization&conditions=id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete adoptions",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=adoption&conditions=puppy_id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy breeds",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy_breed&conditions=puppy_id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy parents",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=parent&conditions=puppy_child_id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy immunizations",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy_immunization&conditions=puppy_id>'0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Jill','3','New Jersey','Jill1.jpg and Jill2.jpg','2018-10-22'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Jack','3','New Jersey','Jack1.jpg and Jack2.jpg','2018-10-23'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Bob','2','New Jersey','bob1.jpg and bob2.jpg','2018-10-24'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 4",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Bridget','2','New Jersey','bridget1.jpg and bridget2.jpg','2018-10-24'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 5",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Charles','1','New Jersey','charles1.jpg and charles2.jpg','2018-10-25'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 6",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Christina','1','New Jersey','christina1.jpg and christina2.jpg','2018-10-25'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 7",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Georgia','7','Provo','georgia.jpg and georia.jpg','2018-10-26'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 8",
+                    "url":"insert.php?user=employee&secretkey=123654&table=puppy&columns=puppy_name,age,location,photos,date_time_posted&values='Alex','3','Orem','alex.jpg and alex.jpg','2018-10-26'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert customer 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=customer&columns=customer_name,age,address,phone,email&values='John','50','123 Longhorn Ave.','152-235-3526','john@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert customer 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=customer&columns=customer_name,age,address,phone,email&values='Joe','20','6 Cali Street','523-262-4375','joe@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert customer 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=customer&columns=customer_name,age,address,phone,email&values='Paulo','23','Rio','384-284-2462','paulo@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Boxer'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Dalmation'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Gordon Setter'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=veterinarian&columns=veterinarian_name,address,city&values='George','1234','Provo'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=veterinarian&columns=veterinarian_name,address,city&values='Jane','2345','Provo'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=veterinarian&columns=veterinarian_name,address,city&values='Anna','3456','Orem'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert immunization 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=immunization&columns=immunization_name&values='Worms'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert immunization 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=immunization&columns=immunization_name&values='Rabies'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }
+            ],
+            "value":0,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "inserting joins",
+            "tests":[
+                {
+                    "name":"Insert adoption 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Jill','John'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Jack','Joe'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Bob','Joe'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Bridget','Joe'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Charles','Joe'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 6",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Christina','Joe'&fktables=puppy,customer&fkcolumns=puppy_name,customer_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Jill','Boxer'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Jack','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Bob','Gordon Setter'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Bridget','Gordon Setter'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Charles','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_6",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Christina','Boxer'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_7",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Georgia','Boxer'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_8",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Alex','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Jill','Bridget','mother'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Jack','Bridget','father'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Bridget','Christina','mother'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }
+            ],
+            "value":0,
+            "outputOptions":["none"]
+        },
+        
+        {
+            "name": "inserting immunizations",
+            "tests":[
+                {
+                    "name":"Insert puppy_immunization 1",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jill&immunization=Worms&veterinarian=George",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 2",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jill&immunization=Rabies&veterinarian=Jane",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 3",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jack&immunization=Rabies&veterinarian=Anna",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 4",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Bob&immunization=Worms&veterinarian=Anna",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }
+            ],
+            "value":0,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading adoption 1 (checking insert_join page)",
+            "tests":[
+                {
+                    "name":"reading adoption 1 (checking insert_join page)",
+                    "url":"read.php?user=employee&secretkey=123654&table=adoption,puppy&conditions=adoption.puppy_id=puppy.id AND puppy_name='Jill'",
+                    "format":"json",
+                    "output":"Jill",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading immunization 1",
+            "tests":[
+                {
+                    "name":"reading puppy_immunization 1 (checking give_immunization page)",
+                    "url":"read.php?user=employee&secretkey=123654&table=puppy_immunization,puppy&conditions=puppy_immunization.puppy_id=puppy.id AND puppy_name='Jill'",
+                    "format":"json",
+                    "output":"Jill",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading no immunizations",
+            "tests":[
+                {
+                    "name":"reading no immunizations, check is there",
+                    "url":"noimmus.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"Bridget",
+                    "reversed":0
+                },
+                {
+                    "name":"reading no immunizations, check is not there",
+                    "url":"noimmus.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"Jill",
+                    "reversed":1
+                }
+            ],
+            "value":0.5,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading no customer adoptions",
+            "tests":[
+                {
+                    "name":"reading customer adoptions (customer has ordered)",
+                    "url":"customerpups.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"{\"customer_name\":\"John\",\"numpups\":1}",
+                    "reversed":0
+                },
+                {
+                    "name":"reading customer adoptions (customer has not ordered)",
+                    "url":"customerpups.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"{\"customer_name\":\"Paulo\",\"numpups\":0}",
+                    "reversed":0
+                }
+            ],
+            "value":0.5,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading no breed adoptions",
+            "tests":[
+                {
+                    "name":"reading breed adoptions (all of breed has been adopted)",
+                    "url":"unadoptedbreedcounts.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"Gordon Setter",
+                    "reversed":1
+                },
+                {
+                    "name":"reading breed adoptions (breed has not been adopted)",
+                    "url":"unadoptedbreedcounts.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"{\"breed_name\":\"Boxer\",\"numpups\":1}",
+                    "reversed":0
+                }
+            ],
+            "value":0.5,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading popular customers",
+            "tests":[
+                {
+                    "name":"reading popular customers",
+                    "url":"popularcustomers.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"[{\"customer_name\":\"Joe\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading veterinarian cities",
+            "tests":[
+                {
+                    "name":"reading veterinarian cities",
+                    "url":"vetcities.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"[{\"city\":\"Provo\"},{\"city\":\"Orem\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading pedigree",
+            "tests":[
+                {
+                    "name":"reading pedigree",
+                    "url":"pedigree.php?user=employee&secretkey=123654&puppy=Christina",
+                    "format":"json",
+                    "output":"{\"Christina\":[{\"Bridget\":[{\"Jill\":[]},{\"Jack\":[]}]}]}",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "deleting immunization",
+            "tests":[
+                {
+                    "name":"deleting immunization",
+                    "url":"delete_immunizations.php?user=employeeadmin&secretkey=321456&immunization=Rabies",
+                    "format":"text",
+                    "output":"",
+                    "reversed":0
+                }
+            ],
+            "value":0,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "reading immunization",
+            "tests":[
+                {
+                    "name":"reading immunizations (checking delete puppy_immunizations)",
+                    "url":"read.php?user=employee&secretkey=123654&table=puppy_immunization,immunization&conditions=puppy_immunization.immunization_id=immunization.id",
+                    "format":"text",
+                    "output":"Rabies",
+                    "reversed":1
+                },
+                {
+                    "name":"reading immunizations (checking delete immunization)",
+                    "url":"read.php?user=employee&secretkey=123654&table=immunization",
+                    "format":"text",
+                    "output":"Rabies",
+                    "reversed":1
+                }
+            ],
+            "value":0.5,
+            "outputOptions":["none"]
+        }
+        
+    ],
+    "tableOptions":["test"],
+    "columnOptions":["test"]
+}

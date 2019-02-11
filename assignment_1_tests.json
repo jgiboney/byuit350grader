@@ -1,0 +1,181 @@
+{
+    "testSets":[
+        {
+            "name": "reading",
+            "tests":[
+                {
+                    "name":"Read - exists",
+                    "url":"read.php",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Read - with bad user",
+                    "url":"read.php?user=e&secretkey=123&table=<table>",
+                    "format":"text",
+                    "output":"<table>",
+                    "reversed":1
+                },
+                {
+                    "name":"Read - with good user",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"<column_name>",
+                    "reversed":0
+                },
+                {
+                    "name":"Read - order",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>&order=<column_name>",
+                    "format":"json",
+                    "output":"<column_name>",
+                    "reversed":0
+                },
+                {
+                    "name":"Read - limit 0,1",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>&limit=0,1",
+                    "format":"json",
+                    "output":"<column_name>",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "inserting",
+            "tests":[
+                {
+                    "name":"Insert - exists",
+                    "url":"insert.php",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert - table",
+                    "url":"insert.php?user=employee&secretkey=123654&table=<table>&columns=<column_name>&values='zzzrrrttt'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name":"insertChecking",
+            "tests":[
+                {
+                    "name":"Read - where",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"zzzrrrttt",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name":"updating",
+            "tests":[
+                {
+                    "name":"Update - exists",
+                    "url":"update.php",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Update - table",
+                    "url":"update.php?user=employee&secretkey=123654&table=<table>&set=<column_name>='rrrzzzttt'&conditions=<column_name>='zzzrrrttt'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Read - check update",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"rrrzzzttt",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name":"deleting",
+            "tests":[
+                {
+                    "name":"Delete - exists",
+                    "url":"delete.php",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete - with bad user",
+                    "url":"delete.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"text",
+                    "output":"<output>",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete - with good user no where",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=<table>",
+                    "format":"text",
+                    "output":"<output>",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete - with good user where",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=<table>&conditions=<column_name>='rrrzzzttt'",
+                    "format":"text",
+                    "output":"<output>",
+                    "reversed":1
+                },
+                {
+                    "name":"Read - check delete",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"rrrzzzttt",
+                    "reversed":1
+                },
+                {
+                    "name":"Read - check delete everything",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"<column_name>",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["error","invalid","bad","incorrect","failed"]
+        },
+        {
+            "name":"injecting",
+            "tests":[
+                {
+                    "name":"Check Sql Inject",
+                    "url":"insert.php?user=employee&secretkey=123654&table=<table>&columns=<column_name>&values=(select.version())",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Read check Sql Inject",
+                    "url":"read.php?user=employee&secretkey=123654&table=<table>",
+                    "format":"json",
+                    "output":"<output>",
+                    "reversed":1
+                }
+            ],
+            "value":1,
+            "outputOptions":["MariaDB","MyDB"]
+        }
+    ],
+    "tableOptions":["puppy","puppies","Puppy","Puppies"],
+    "columnOptions":["puppy_name","name","pup_name","dog_name","uname"]
+}
