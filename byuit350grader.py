@@ -222,6 +222,7 @@ def run_tests_on_all_ips (ips, config, multiplier, verbose=False):
         url = 'http://' + ip_params[0] + '/'
         if len(ip_params) > 2:
             url += ip_params[2] + '/'
+        url = url.replace('\n','')
         netid = ip_params[1]
 
         total_points = 0
