@@ -230,7 +230,7 @@ def run_tests_on_all_ips (ips, config, multiplier, verbose=False):
 
         with open(config) as jsonFile:
             testSets = json.load(jsonFile)
-
+        
         for testSet in testSets['testSets']: 
             set_points, set_possible_points = run_test_set(url, testSet, testSets['tableOptions'], testSets['columnOptions'], verbose)
             total_points += set_points

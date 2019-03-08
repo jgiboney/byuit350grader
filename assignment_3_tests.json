@@ -1,0 +1,622 @@
+{
+    "testSets":[
+        {
+            "name": "setup",
+            "value":0,
+            "outputOptions":["none"],
+            "tests":[
+                {
+                    "name":"Delete adoptions",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=adoption&conditions=puppy_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete breeds",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=breed&conditions=id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete customers",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=customer&conditions=person_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete employee",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=employee&conditions=person_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete employee_manages",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=employee_manages&conditions=employee_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete employee_works_at",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=employee_works_at&conditions=employee_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete immunizations",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=immunization&conditions=id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete locations",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=location&conditions=id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy parents",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=parent&conditions=puppy_child_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete person",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=person&conditions=id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppies",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy&conditions=id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy breeds",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy_breed&conditions=puppy_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete puppy immunizations",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=puppy_immunization&conditions=puppy_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Delete veterinarians",
+                    "url":"delete.php?user=employeeadmin&secretkey=321456&table=veterinarian&conditions=person_id>='0'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert location 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=location&columns=location_name&values='Downtown SLC'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert location 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=location&columns=location_name&values='Country Mapleton'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert location 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=location&columns=location_name&values='City Center Provo'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='Downtown SLC','Jill','3','Jill1.jpg and Jill2.jpg','2018-10-22','This stunning boy is Ronin. He is an Alaskan Malamute looking for a family who can spend a lot of time with him.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='Country Mapleton','Jack','3','Jack1.jpg and Jack2.jpg','2018-10-23','He will need an active home willing to take him out on long walks and adventures. Ronin does have separation anxiety that he adopters will need to be aware of and be willing to work on.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='City Center Provo','Bob','2','bob1.jpg and bob2.jpg','2018-10-24','He is an escape artist he had figured out how to open locked windows and doors.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='Downtown SLC','Bridget','2','bridget1.jpg and bridget2.jpg','2018-10-24','Due to this he will need a family who is willing to be home most of the time or is willing to find him a sitter when they are away.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='Country Mapleton','Charles','1','charles1.jpg and charles2.jpg','2018-10-25','Despite being a Houdini he is the sweetest dog. He loves his people and is very attached to them.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 6",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='City Center Provo','Christina','1','christina1.jpg and christina2.jpg','2018-10-25','He is one of those dogs that will gladly follow you into a volcano if thats where you are going.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy 7",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy&columns=location,puppy_name,age,photos,date_time_posted,description&values='Downtown SLC','Mutt','1','mutt1.jpg and mutt2.jpg','2018-10-26','He is a mutt.'&fktables=location&fkcolumns=location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Boxer'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Dalmation'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert breed 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=breed&columns=breed_name&values='Gordon Setter'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert immunization 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=immunization&columns=immunization_name&values='Worms'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert immunization 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=immunization&columns=immunization_name&values='Rabies'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert person 1",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='John',50,'123 Longhorn Ave.','152-235-3526','john@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert person 2",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Joe',20,'6 Cali Street','523-262-4375','joe@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 3",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Billy',16,'23 Orange Street','235-235-2642','billy@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 4",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Ruby',28,'63 Walnut Street','274-263-2616','ruby@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 5",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Sarah',62,'84 Pecan Street','863-264-2743','sarah@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 6",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='George',34,'953 Harris Street','943-236-1943','george@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 7",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Anna',32,'495 Turnip Road','274-236-2362','anna@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert person 8",
+                    "url":"insert.php?user=employee&secretkey=123654&table=person&columns=person_name, age, address, phone, email&values='Jane',26,'72 Yarrow road','743-246-2753','jane@example.com'",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }, 
+                {
+                    "name":"Insert customer 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=customer&columns=person_id&values='John'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert customer 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=customer&columns=person_id&values='Joe'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert customer 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=customer&columns=person_id&values='Billy'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee&columns=person_id,hire_date,termination_date&values='Billy','2018-05-12','2018-06-03'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee&columns=person_id,hire_date&values='Ruby','2018-05-13'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee&columns=person_id,hire_date&values='Sarah','2018-05-12'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee 4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee&columns=person_id,hire_date&values='George','2018-06-05'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=veterinarian&columns=person_id,city&values='George','Provo'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=veterinarian&columns=person_id,city&values='Anna','Provo'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert veterinarian 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=veterinarian&columns=person_id,city&values='Jane','Orem'&fktables=person&fkcolumns=person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Jill','John'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Jack','Joe'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Bob','Joe'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Bridget','Joe'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Charles','Joe'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert adoption 6",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=adoption&columns=puppy_id,customer_id&values='Christina','Joe'&fktables=puppy,person&fkcolumns=puppy_name,person_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Jill','Boxer'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Jack','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Bob','Gordon Setter'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Bridget','Gordon Setter'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Charles','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_6",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Christina','Boxer'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_breed_7",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=puppy_breed&columns=puppy_id,breed_id&values='Mutt','Dalmation'&fktables=puppy,breed&fkcolumns=puppy_name,breed_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Jill','Bridget','mother'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Jack','Bridget','father'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert parent_parent 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=parent&columns=puppy_parent_id,puppy_child_id,mother_or_father&values='Bridget','Christina','mother'&fktables=puppy,puppy&fkcolumns=puppy_name,puppy_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 1",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jill&immunization=Worms&veterinarian=George",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 2",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jill&immunization=Rabies&veterinarian=Jane",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 3",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Jack&immunization=Rabies&veterinarian=Anna",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert puppy_immunization 4",
+                    "url":"give_immunization.php?user=employee&secretkey=123654&puppy=Bob&immunization=Worms&veterinarian=Anna",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='Ruby','Downtown SLC'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='Sarah','Country Mapleton'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='George','City Center Provo'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 3",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='George','Country Mapleton'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 4",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='Anna','City Center Provo'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_works_at 5",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='Anna','Downtown SLC'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_manages 1",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_manages&columns=employee_id,location_id&values='Jane','Country Mapleton'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                },
+                {
+                    "name":"Insert employee_manages 2",
+                    "url":"insert_join.php?user=employee&secretkey=123654&table=employee_manages&columns=employee_id,location_id&values='Jane','City Center Provo'&fktables=person,location&fkcolumns=person_name,location_name",
+                    "format":"text",
+                    "output":"none",
+                    "reversed":0
+                }
+            ]
+        },
+        {
+            "name": "Testing search page",
+            "tests":[
+                {
+                    "name":"Searching for 'dog'",
+                    "url":"search.php?user=employee&secretkey=123654&query=dog",
+                    "format":"json",
+                    "output":"0.71419",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "Testing longest waiting page",
+            "tests":[
+                {
+                    "name":"Longest waiting puppies",
+                    "url":"longest_waiting.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"[{\"puppy_name\":\"Jill\"},{\"puppy_name\":\"Jack\"},{\"puppy_name\":\"Bob\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "Testing longest waiting page",
+            "tests":[
+                {
+                    "name":"Longest waiting puppies",
+                    "url":"location_employees.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"{\"person_name\":\"Jane\",\"location_name\":\"City Center Provo\",\"manages\":\"manages\"},{\"person_name\":\"Ruby\",\"location_name\":\"Downtown SLC\",\"works at\":\"works at\"}",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "Testing employees that are customers",
+            "tests":[
+                {
+                    "name":"Employee Customers",
+                    "url":"employee_customers.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"[{\"person_name\":\"Billy\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "Testing not all breeds",
+            "tests":[
+                {
+                    "name":"Not all breeds",
+                    "url":"not_all_breeds.php?user=employee&secretkey=123654",
+                    "format":"json",
+                    "output":"[{\"location_name\":\"Downtown SLC\"},{\"location_name\":\"City Center Provo\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        },
+        {
+            "name": "Testing works all",
+            "tests":[
+                {
+                    "name":"Employee works at all locations of managers",
+                    "url":"works_all.php?user=employee&secretkey=123654&manager=Jane",
+                    "format":"json",
+                    "output":"[{\"person_name\":\"George\"}]",
+                    "reversed":0
+                }
+            ],
+            "value":1,
+            "outputOptions":["none"]
+        }
+    ],
+    "tableOptions":["test"],
+    "columnOptions":["test"]
+}
