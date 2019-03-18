@@ -496,7 +496,7 @@
                     "reversed":0
                 },
                 {
-                    "name":"Insert employee_works_at 3",
+                    "name":"Insert employee_works_at 4",
                     "url":"insert_join.php?user=employee&secretkey=123654&table=employee_works_at&columns=employee_id,location_id&values='George','Country Mapleton'&fktables=person,location&fkcolumns=person_name,location_name",
                     "format":"text",
                     "output":"none",
@@ -561,13 +561,13 @@
             "outputOptions":["none"]
         },
         {
-            "name": "Testing longest waiting page",
+            "name": "Location of employees",
             "tests":[
                 {
-                    "name":"Longest waiting puppies",
+                    "name":"Location of employees",
                     "url":"location_employees.php?user=employee&secretkey=123654",
                     "format":"json",
-                    "output":"{\"person_name\":\"Jane\",\"location_name\":\"City Center Provo\",\"manages\":\"manages\"},{\"person_name\":\"Ruby\",\"location_name\":\"Downtown SLC\",\"works at\":\"works at\"}",
+                    "output":"{\"person_name\":\"Jane\",\"location_name\":\"City Center Provo\",\"role\":\"manages\"},{\"person_name\":\"Ruby\",\"location_name\":\"Downtown SLC\",\"role\":\"works at\"}",
                     "reversed":0
                 }
             ],
@@ -595,7 +595,7 @@
                     "name":"Not all breeds",
                     "url":"not_all_breeds.php?user=employee&secretkey=123654",
                     "format":"json",
-                    "output":"[{\"location_name\":\"Downtown SLC\"},{\"location_name\":\"City Center Provo\"}]",
+                    "output":"[{\"location_name\":\"Country Mapleton\"},{\"location_name\":\"City Center Provo\"}]",
                     "reversed":0
                 }
             ],
